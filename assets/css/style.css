@@ -1,6 +1,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #444444;
+  background-image: url;
   padding: 0;
  }
 
@@ -114,8 +115,8 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu li:hover > a {
   color: white;
   background: green;
-  padding: 10px;
-  border-radius: 20px;
+  /* padding: 10px; */
+  border-radius: 25px;
  }
 
  .TeacherX {
@@ -386,28 +387,93 @@ body .menu-open{
 
  
 #main{
-  background-color: #444444;
   margin-bottom: 0px;
 }
-.inner{
-  background-color: #fff;
-
+.recentnews{
+  padding: 60px 0;
+  background-image: url(../images/2.jpg);
+  margin-bottom: 0px;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  #recent{
+    padding-top: 145px;
+  color: #ffa500;
+  font-size: 60px;
+  text-align: center;
 }
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(3px);
+  z-index: 0;
+}
+
+.recentnews .container {
+  position: relative;
+  z-index: 1;
+}
+.recentnews .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#register, #quiz {
+  background-color: #ffa500;
+  margin: 0 20px;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  min-width: 200px;
+}
+
+#register, #quiz {
+  background-color: #ffa500;
+  color: white;
+  transition: 0.3s;
+}
+
+#register:hover, #quiz:hover {
+  background-color: green;
+  color: white;
+}
+
+
+/* .recentnews::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: cover;
+  filter: blur(50px);
+  z-index: -1;
+} */
+
 
 /* NEww */
 /* News Section */
 .recentnews {
   padding: 60px 0;
-  background-color: #444444;
+  
 }
 
-.recentnews .row {
+/* .recentnews .row {
   padding-right: 15px;
   padding-left: 15px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-}
+} */
 #recent{
   padding-left: 10px;
   color: #fff;
@@ -667,30 +733,43 @@ font-size: 30px;
 
 #footer .top{
 background-color: #ffa500;
-padding: 25px 0 2px 0;
+padding: 25px;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .social-links {
-display: block;
+display: flex;
 text-align: right;
 padding-right: 30px;
 }
 
 #footer .social-links a {
 font-size: 18px;
-display: inline-block;
+display: flex;
+justify-content: center;
+align-items: center;
 background: #ffa500;
 color: #fff;
 line-height: 1;
-padding: 8px 10px ;
+/* padding: 8px 10px ;
 margin-top: 15px;
 margin-bottom: 30px;
-margin-right: 4px;
-border-radius: 70px;
+margin-right: 4px; */
+margin-left: 8px;
+border-radius: 50%;
 text-align: center;
-width: 30px;
-height: 20px;
+width: 36px;
+height: 36px;
 transition: 0.3s;
+text-decoration: none;
 }
 
 #footer .social-links a:hover {
@@ -723,6 +802,7 @@ position: relative;
 z-index: 1;
 padding-left: 150px;
 background-color: inherit; 
+color: #fff;
 /* padding-right: 100px;  */
 }
 
@@ -824,6 +904,14 @@ footer section > div {
   flex: 0 0 50%;
 }
 
+.footer-content{
+  flex-direction: column;
+  text-align: center;
+}
+
+.copyright{
+  margin-bottom: 20px;
+}
 }
 
 /* For extra small screens (small smartphones) */
