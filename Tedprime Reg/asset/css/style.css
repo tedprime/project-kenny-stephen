@@ -5,15 +5,9 @@ body {
     padding: 0;
    }
 
-   body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
+ 
 /* image container begin*/
    .container {
-    position: relative;
     width: 100%;
     height: 100vh;
   }
@@ -22,7 +16,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
     top: 0;
     left: 0;
     z-index: -2;
@@ -159,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
 *, ::after, ::before {
     box-sizing: border-box;
 }
-user agent stylesheet
+
 h1 {
     display: block;
     /* font-size: 2em; */
@@ -238,32 +231,40 @@ div {
 /*text center end*/
 
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
 
-@media screen and (max-width: 1200px) {
-  body, html {
-    font-size: 16px;
+  @media (max-width: 1200px) {
+    /* Existing styles */
   }
-}
+  
+  @media (max-width: 992px) {
+    /* Existing styles */
+  }
+  
+  @media (max-width: 768px) {
+    /* Existing styles */
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.2rem;
+    }
+    
+    .lead {
+      font-size: 0.9rem;
+    }
+    
+    .btn-lg {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.5rem;
+    }
+    
+    .py-5 {
+      padding-top: 1.5rem !important;
+      padding-bottom: 1.5rem !important;
+    }
+    
+    #main {
+      padding: 1rem;
+    }
+  }
 
-@media screen and (max-width: 992px) {
-  body, html {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  body, html {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  body, html {
-    font-size: 13px;
-  }
-}
